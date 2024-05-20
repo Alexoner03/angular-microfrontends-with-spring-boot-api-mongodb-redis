@@ -1,4 +1,4 @@
-package com.vuce.be.multilang.core.infraestructure.presistence;
+package com.vuce.be.multilang.core.infraestructure.repositories;
 
 import com.vuce.be.multilang.core.domain.entities.Lang;
 import com.vuce.be.multilang.core.domain.repositories.ILangRepository;
