@@ -3,18 +3,14 @@ package com.vuce.be.multilang.core.infraestructure.presistence;
 import com.vuce.be.multilang.core.domain.entities.Lang;
 import com.vuce.be.multilang.core.domain.repositories.ILangRepository;
 import com.vuce.be.multilang.shared.application.errors.NotFoundError;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.cache.annotation.Caching;
-import org.springframework.context.annotation.Primary;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Component;
-
-import java.util.HashMap;
 
 @Component
 public class LangMongoDbRepository implements ILangRepository {
@@ -69,7 +65,7 @@ public class LangMongoDbRepository implements ILangRepository {
             return;
         }
 
-        mongoTemplate.findAndRemove(query, HashMap.class, "langs");
+        mongoTemplate.findAndRemove(query, Lang.class, "langs");
         mongoTemplate.save(body, "langs");
     }
 }

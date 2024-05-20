@@ -8,7 +8,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
 
 @RestController
 public class LangController {
@@ -23,7 +22,7 @@ public class LangController {
 
     @GetMapping("/lang/{name}")
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<HashMap<String, Object>> getLang(@PathVariable("name") String name) throws NotFoundError {
+    public ResponseEntity<Lang> getLang(@PathVariable("name") String name) throws NotFoundError {
         return ResponseEntity.ok(getLangUseCase.get(name));
     }
 

@@ -5,8 +5,6 @@ import com.vuce.be.multilang.core.domain.repositories.ILangRepository;
 import com.vuce.be.multilang.shared.application.annotations.ApplicationLayerService;
 import com.vuce.be.multilang.shared.application.errors.NotFoundError;
 
-import java.util.HashMap;
-
 @ApplicationLayerService
 public class GetLangUseCase {
 
