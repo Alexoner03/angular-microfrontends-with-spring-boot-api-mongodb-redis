@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/api/multilang-api" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mf-one" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mf-two" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/root-config" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/styleguide" vcs="Git" />
+  </component>
+</project>

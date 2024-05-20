@@ -1,0 +1,11 @@
+services:
+  redis:
+    image: 'bitnami/redis'
+    ports:
+      - "6379:6379"
+    environment:
+      - REDIS_PASSWORD=redisPassword
+  mongodb:
+    image: mongo:7-jammy
+    ports:
+      - '27017:27017'
