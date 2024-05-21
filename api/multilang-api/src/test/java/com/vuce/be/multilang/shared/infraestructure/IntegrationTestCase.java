@@ -7,9 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.TestPropertySource;
 
-@ContextConfiguration(classes = MultilangApiApplication.class)
 @SpringBootTest
+@ContextConfiguration(classes = MultilangApiApplication.class)
+@TestPropertySource(locations = "classpath:application-test.properties")
 public abstract class IntegrationTestCase extends GenericTestCase {
     @Autowired
     protected LangMongoDbRepository mongoDbRepository;
