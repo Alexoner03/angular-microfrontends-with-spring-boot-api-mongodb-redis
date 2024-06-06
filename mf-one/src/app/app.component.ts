@@ -14,10 +14,6 @@ export class AppComponent {
   title = 'mf-one';
   private readonly availableLanguages = ['en', 'es'];
 
-  selectLang(name: string) {
-    setLang(name);
-  }
-
   constructor(private readonly translate: TranslateService) {
     this.translate.addLangs(this.availableLanguages);
     const lang = getLang();
@@ -31,5 +27,9 @@ export class AppComponent {
 
   changeLanguage(lang: string) {
     this.translate.use(lang);
+  }
+
+  selectLang(name: string) {
+    setLang(name);
   }
 }
